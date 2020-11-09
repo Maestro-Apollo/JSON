@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div id="name"></div>
+</head>
+
+<body>
+
+
+    <script>
+        let data = {
+            "person1": [{
+                "firstName": "Rafi",
+                "lastName": "Mahafid",
+            }, {
+                "firstName": "Refat",
+                "lastName": "Mahadi",
+            }, {
+                "firstName": "Disguy",
+                "lastName": "Toast",
+            }, {
+                "firstName": "Edward",
+                "lastName": "Elric",
+            }]
+        }
+
+        let users = data.person1;
+        let exam = '';
+        for (let i in users) {
+            exam += (Number(i) + 1) + '. ' + users[i].firstName + ' ' + users[i].lastName + '<br>';
+        }
+        document.getElementById('name').innerHTML = exam;
+    </script>
+</body>
+
+</html>
